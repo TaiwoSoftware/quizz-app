@@ -1,0 +1,338 @@
+{
+    "quiz": {
+      "title": "JavaScript Quiz",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the correct way to declare a variable in JavaScript?",
+          "options": [
+            "var x = 10;",
+            "variable x = 10;",
+            "let x = 10;",
+            "dim x = 10;"
+          ],
+          "correctAnswer": "let x = 10;"
+        },
+        {
+          "id": 2,
+          "question": "Which method is used to remove the last element from an array in JavaScript?",
+          "options": [
+            "pop()",
+            "push()",
+            "shift()",
+            "unshift()"
+          ],
+          "correctAnswer": "pop()"
+        },
+        {
+          "id": 3,
+          "question": "How do you create a function in JavaScript?",
+          "options": [
+            "function myFunction() {}",
+            "def myFunction() {}",
+            "create myFunction() {}",
+            "func myFunction() {}"
+          ],
+          "correctAnswer": "function myFunction() {}"
+        },
+        {
+          "id": 4,
+          "question": "What is the result of 3 + 2 + '7' in JavaScript?",
+          "options": [
+            "57",
+            "12",
+            "327",
+            "Error"
+          ],
+          "correctAnswer": "57"
+        },
+        {
+          "id": 5,
+          "question": "Which method is used to find the length of an array in JavaScript?",
+          "options": [
+            "length()",
+            "getLength()",
+            "size()",
+            "length"
+          ],
+          "correctAnswer": "length"
+        },
+        {
+          "id": 6,
+          "question": "Which of the following is not a JavaScript data type?",
+          "options": [
+            "Number",
+            "String",
+            "Boolean",
+            "Character"
+          ],
+          "correctAnswer": "Character"
+        },
+        {
+          "id": 7,
+          "question": "Which operator is used to assign a value to a variable in JavaScript?",
+          "options": [
+            "=",
+            "==",
+            "===",
+            ":="
+          ],
+          "correctAnswer": "="
+        },
+        {
+          "id": 8,
+          "question": "What will the following code output? console.log(typeof 'JavaScript');",
+          "options": [
+            "string",
+            "object",
+            "undefined",
+            "function"
+          ],
+          "correctAnswer": "string"
+        },
+        {
+          "id": 9,
+          "question": "Which keyword is used to declare a constant in JavaScript?",
+          "options": [
+            "const",
+            "constant",
+            "var",
+            "let"
+          ],
+          "correctAnswer": "const"
+        },
+        {
+          "id": 10,
+          "question": "Which method is used to add one or more elements to the end of an array in JavaScript?",
+          "options": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+          ],
+          "correctAnswer": "push()"
+        },
+        {
+          "id": 11,
+          "question": "How do you create an object in JavaScript?",
+          "options": [
+            "var obj = {};",
+            "var obj = [];",
+            "object obj = {};",
+            "var obj = object;"
+          ],
+          "correctAnswer": "var obj = {};"
+        },
+        {
+          "id": 12,
+          "question": "What is the correct syntax for referring to an external script file in JavaScript?",
+          "options": [
+            "<script src='file.js'></script>",
+            "<script href='file.js'></script>",
+            "<script ref='file.js'></script>",
+            "<script file='file.js'></script>"
+          ],
+          "correctAnswer": "<script src='file.js'></script>"
+        },
+        {
+          "id": 13,
+          "question": "Which method is used to convert a string to an array in JavaScript?",
+          "options": [
+            "split()",
+            "join()",
+            "toArray()",
+            "array()"
+          ],
+          "correctAnswer": "split()"
+        },
+        {
+          "id": 14,
+          "question": "What does the 'this' keyword refer to in JavaScript?",
+          "options": [
+            "The current object",
+            "The global object",
+            "The previous object",
+            "It refers to nothing"
+          ],
+          "correctAnswer": "The current object"
+        },
+        {
+          "id": 15,
+          "question": "Which of the following is not a JavaScript loop?",
+          "options": [
+            "for",
+            "while",
+            "repeat",
+            "do...while"
+          ],
+          "correctAnswer": "repeat"
+        },
+        {
+          "id": 16,
+          "question": "What will be the result of the following expression? 5 + '5' in JavaScript?",
+          "options": [
+            "10",
+            "'55'",
+            "Error",
+            "'5 5'"
+          ],
+          "correctAnswer": "'55'"
+        },
+        {
+          "id": 17,
+          "question": "Which method is used to find the position of a substring in a string in JavaScript?",
+          "options": [
+            "indexOf()",
+            "find()",
+            "position()",
+            "substringIndex()"
+          ],
+          "correctAnswer": "indexOf()"
+        },
+        {
+          "id": 18,
+          "question": "How do you write a comment in JavaScript?",
+          "options": [
+            "// This is a comment",
+            "/* This is a comment */",
+            "<!-- This is a comment -->",
+            "## This is a comment"
+          ],
+          "correctAnswer": "// This is a comment"
+        },
+        {
+          "id": 19,
+          "question": "What will the following code return? NaN === NaN",
+          "options": [
+            "false",
+            "true",
+            "undefined",
+            "NaN"
+          ],
+          "correctAnswer": "false"
+        },
+        {
+          "id": 20,
+          "question": "Which of the following methods can be used to combine two arrays in JavaScript?",
+          "options": [
+            "concat()",
+            "merge()",
+            "combine()",
+            "join()"
+          ],
+          "correctAnswer": "concat()"
+        },
+        {
+          "id": 21,
+          "question": "Which operator is used to compare both value and type in JavaScript?",
+          "options": [
+            "===",
+            "==",
+            "!=",
+            "!=="
+          ],
+          "correctAnswer": "==="
+        },
+        {
+          "id": 22,
+          "question": "Which of the following is the correct way to define an array in JavaScript?",
+          "options": [
+            "var arr = [1, 2, 3];",
+            "var arr = (1, 2, 3);",
+            "var arr = {1, 2, 3};",
+            "var arr = <1, 2, 3>;"
+          ],
+          "correctAnswer": "var arr = [1, 2, 3];"
+        },
+        {
+          "id": 23,
+          "question": "What is the result of the expression: 10 === '10'?",
+          "options": [
+            "false",
+            "true",
+            "NaN",
+            "undefined"
+          ],
+          "correctAnswer": "false"
+        },
+        {
+          "id": 24,
+          "question": "Which of the following is a JavaScript error type?",
+          "options": [
+            "SyntaxError",
+            "ReferenceError",
+            "TypeError",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "id": 25,
+          "question": "Which method is used to remove the first element from an array in JavaScript?",
+          "options": [
+            "shift()",
+            "pop()",
+            "unshift()",
+            "push()"
+          ],
+          "correctAnswer": "shift()"
+        },
+        {
+          "id": 26,
+          "question": "Which method is used to check whether an array contains a specific element in JavaScript?",
+          "options": [
+            "includes()",
+            "contains()",
+            "has()",
+            "in()"
+          ],
+          "correctAnswer": "includes()"
+        },
+        {
+          "id": 27,
+          "question": "What is the result of the expression: 3 > 2 > 1?",
+          "options": [
+            "true",
+            "false",
+            "NaN",
+            "undefined"
+          ],
+          "correctAnswer": "false"
+        },
+        {
+          "id": 28,
+          "question": "How can you convert a string to a number in JavaScript?",
+          "options": [
+            "Number('5')",
+            "parseInt('5')",
+            "parseFloat('5')",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "id": 29,
+          "question": "Which method is used to replace a specified value in a string in JavaScript?",
+          "options": [
+            "replace()",
+            "replaceAll()",
+            "substitute()",
+            "replaceWith()"
+          ],
+          "correctAnswer": "replace()"
+        },
+        {
+          "id": 30,
+          "question": "What does the 'setTimeout()' method do in JavaScript?",
+          "options": [
+            "Executes code after a specified delay",
+            "Sets a timer for a specified delay",
+            "Pauses the execution for a specified time",
+            "Executes code immediately"
+          ],
+          "correctAnswer": "Executes code after a specified delay"
+        }
+      ]
+    }
+  }
+  
