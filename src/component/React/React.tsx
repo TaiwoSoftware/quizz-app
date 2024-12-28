@@ -32,7 +32,7 @@ const React = () => {
 
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("/quiz-questions/html.json");
+        const response = await fetch("/quiz-questions/react.json");
         if (!response.ok) {
           throw new Error(`Failed to fetch: ${response.statusText}`);
         }
