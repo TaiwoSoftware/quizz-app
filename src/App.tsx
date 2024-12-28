@@ -7,7 +7,7 @@ import JavaScript from "./component/JavaScript/JavaScript";
 import LandingPage from "./component/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "./component/React/React";
-// import QuizPage from "./QuizPage"; 
+import Error from "./component/Error";
 function App() {
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/html" element={<Html />} />
           <Route path="/javaScript" element={<JavaScript />} />
           <Route path="/react" element={<React />} />
-          {/* <Route path="/quiz/:id" element={<QuizPage />} /> */}
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </>
