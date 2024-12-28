@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import navigation hook
 import { AlertCircle, Loader2 } from "lucide-react";
 
 type Question = {
@@ -21,8 +22,10 @@ const Quiz = () => {
   const [quit, setQuit] = useState(false);
   const [confirmQuit, setConfirmQuit] = useState(false);
   const [quizState, setQuizState] = useState<QuizState>({ status: "loading" });
-  const [loadingQuit, setLoadingQuit] = useState(false);
+  const [loadingQuit] = useState(false);
   const [showScore, setShowScore] = useState(false);
+  
+  const navigate = useNavigate(); // Use navigate to redirect to the home page
 
   useEffect(() => {
     let mounted = true;
@@ -117,17 +120,14 @@ const Quiz = () => {
   };
 
   const confirmQuitAction = () => {
-    // setLoadingQuit(true);
     setQuit(true);
     setQuizFinished(true);
-    setLoadingQuit(false);
     setShowScore(true);
-    // setTimeout(() => {
-    //   setQuit(true);
-    //   setQuizFinished(true);
-    //   setLoadingQuit(false);
-    //   setShowScore(true);
-    // }, 1500);
+
+    // Redirect to home page after showing the result
+    setTimeout(() => {
+      navigate("/"); // Redirect to the home page after showing the result
+    }, 0); // No delay, immediate redirect after showing the score
   };
 
   const cancelQuitAction = () => {
@@ -184,11 +184,9 @@ const Quiz = () => {
                   key={index}
                   onClick={() => handleAnswerSelection(option)}
                   className={`w-full p-4 text-left rounded-lg transition-colors
-                    ${
-                      selectedAnswer === option
-                        ? "bg-blue-100 border-blue-500 border-2"
-                        : "bg-gray-50 border-gray-200 border hover:bg-gray-100"
-                    }
+                    ${selectedAnswer === option
+                      ? "bg-blue-100 border-blue-500 border-2"
+                      : "bg-gray-50 border-gray-200 border hover:bg-gray-100"}
                   `}
                 >
                   {option}
@@ -207,11 +205,9 @@ const Quiz = () => {
                 onClick={handleNext}
                 disabled={!selectedAnswer}
                 className={`py-3 px-6 rounded-lg font-medium transition-colors
-                  ${
-                    selectedAnswer
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  }
+                  ${selectedAnswer
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed"}
                 `}
               >
                 Next Question

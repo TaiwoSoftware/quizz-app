@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "./Config";
@@ -49,22 +50,12 @@ const Login = () => {
       });
 
       if (error) {
-        // Handle specific Supabase error messages
-        switch (error.message) {
-          case "Invalid login credentials":
-            setError("Invalid email or password. Please try again.");
-            break;
-          case "Email not confirmed":
-            setError("Please confirm your email address before logging in.");
-            break;
-          default:
-            setError(error.message);
-        }
+        // Handle only invalid credentials error
+        setError("Invalid email or password. Please try again.");
       } else if (data.user) {
         // Successful login
         navigate("/"); // Redirect to dashboard or home page
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError("An unexpected error occurred. Please try again later.");
     } finally {
