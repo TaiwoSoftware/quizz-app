@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import navigation hook
 import Input from "./Input";
-import supabase from "./supabaseClient";
+import supabase from "./Config";
 
 const SignIn = () => {
   const [fullName, setFullName] = useState<string>("");

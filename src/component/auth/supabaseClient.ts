@@ -1,11 +1,16 @@
-import { createClient } from "@supabase/supabase-js";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthChangeEvent } from '@supabase/supabase-js';
+import supabase from './Config';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+export const useAuthStateChange = () => {
+  const navigate = useNavigate();
 
-const supabase = createClient(supabaseUrl, supabaseKey, {
-  
-});
-
-
-export default supabase;
+  useEffect(() => {
+    supabase.auth.onAuthStateChange((event: AuthChangeEvent) => {
+      if (event === 'SIGNED_OUT') {
+        navigate('/login');
+      }
+    });
+  }, [navigate]);
+};

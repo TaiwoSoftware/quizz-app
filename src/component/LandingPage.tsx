@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "./hooks/UseAuth";
 
 const LandingPage = () => {
+  const { user, loading } = useAuth();
+
   return (
     <div className="h-screen flex items-center justify-center p-4 bg-gray-900">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-screen-xl">
@@ -34,19 +37,20 @@ const LandingPage = () => {
               {"==> "} JavaScript
             </p>
           </Link>
-
           <Link to={"/react"}>
             <p className="bg-slate-700 text-white text-xl sm:text-3xl font-inconsolata rounded-lg p-6 mb-2 cursor-pointer">
               {"</> "} React
             </p>
           </Link>
 
-          {/* Create Account Button */}
-          <Link to={"/create-account"}>
-            <button className="bg-blue-600 text-white text-lg sm:text-xl font-inconsolata rounded-lg p-4 mt-6 w-full hover:bg-blue-700 transition duration-300 ease-in-out">
-              Create an Account
-            </button>
-          </Link>
+          {/* Create Account Button - Only show if not logged in */}
+          {!loading && !user && (
+            <Link to={"/create-account"}>
+              <button className="bg-blue-600 text-white text-lg sm:text-xl font-inconsolata rounded-lg p-4 mt-6 w-full hover:bg-blue-700 transition duration-300 ease-in-out">
+                Create an Account
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
