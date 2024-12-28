@@ -1,6 +1,6 @@
 import { useState } from "react";
 import supabase from "./supabaseClient"; // Import your Supabase client
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -86,9 +86,9 @@ const Login = () => {
         </form>
         <p className="text-gray-400 text-center mt-4">
           Don't have an account?{" "}
-          <a href="/signup" className="text-blue-500 hover:underline">
+          <Link to="/create-account" className="text-blue-500 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
